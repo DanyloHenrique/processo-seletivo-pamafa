@@ -6,6 +6,11 @@ Front-End:
 - Next.js
 - Styled Components
 
+Back-End
+- Node.js
+- Express
+- Cors
+
 ## Como rodar o projeto
 
 Primeiro é necessário clonar o repositório e entrar no diretório do projeto
@@ -33,6 +38,29 @@ npm run dev
 ```
 
 Abrir [http://localhost:3000](http://localhost:3000) no navegador para ver o resultado
+
+### Back-End
+
+1. Entrar na pasta back-end
+```bash
+cd back-end
+```
+
+2. Instalar dependências do projeto
+
+```bash
+npm install
+```
+3. Executar o projeto
+
+```bash
+npm run dev
+# OR
+npm run start
+# OR
+node app.js
+```
+
 
 ## Referências
 

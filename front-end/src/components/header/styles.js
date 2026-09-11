@@ -5,55 +5,55 @@ import { theme } from "@/styles/theme"
 const HeaderWrapper = styled.header`
     grid-area: header;
 
+    height: 3.75rem;
     width: 100%;
-    height: 7.5rem;
-    background-color: var(--color-white);
-    color: var(--color-text);
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
     border-bottom: 1px solid rgb(0, 0, 0, 0.3);
+    
+    padding: .75rem .625rem;
+    gap: .625rem;
 
-    padding: 1.25rem 2.5rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
+    overflow-wrap: normal;
 
-        @media(max-width: ${theme.breakpoints.xs}){
-        height: 3.75rem;
-        padding: .75rem .625rem;
-        gap: .625rem;
+    @media(${theme.medias.xs}){
+        height: 7.5rem;
+        background-color: var(--color-white);
+        color: var(--color-text);
 
-        background-color: var(--color-primary);
-        color: var(--color-text-light);
-
-        align-items: baseline;
-        overflow-wrap: normal;
+        padding: 1.25rem 2.5rem;
+        align-items: center;
     }
 
 
     /* toggle IMAGE and TITLE components*/
     ${TitleWrapper}{
-        display: block;
-            @media(max-width: ${theme.breakpoints.xs}){
-            display: none;
+        display: none;
+        @media(${theme.medias.xs}){
+            display: block;
         }
     } 
     > img{
-        display: none;
-            @media(max-width: ${theme.breakpoints.xs}){
-            display: block;
+        display: block;
+        @media(${theme.medias.xs}){
+            display: none;
         }
     }
 `
 
 const UserName = styled.p`
-    color: var(--color-text-gray);
-    font-weight: 200;
-    font-size: 20px;
-
-        @media(max-width: ${theme.breakpoints.xs}){
-        font-size: 14px;
-        font-weight: 500;
-        color: var(--color-text-light);
-        text-wrap-mode: nowrap;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-light);
+    text-wrap-mode: nowrap;
+    
+    @media(${theme.medias.xs}){
+        color: var(--color-text-gray);
+        font-weight: 200;
+        font-size: 20px;
     }
 `
 

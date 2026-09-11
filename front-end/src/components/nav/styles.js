@@ -5,27 +5,27 @@ import { theme } from "@/styles/theme";
 const SidebarWrapper = styled.aside`
     grid-area: nav;
 
-    background-color: var(--color-primary);
-    height: 100dvh;
+    background-color: transparent;
+    height: 2.5rem;
+    display: flex;
+    overflow-x: scroll;
 
-    @media(max-width: ${theme.breakpoints.xs}){
-        background-color: transparent;
-        height: 2.5rem;
-        display: flex;
-        flex-direction: row;
-        overflow-x: scroll;
+    @media ${theme.medias.xs}{
+        height: 100dvh;
+        background-color: var(--color-primary);
+        flex-direction: column;
     }
 `
 const ContainerLogo = styled.div`
-    width: 280px;
-    height: 132px;
+    display: none;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @media ${theme.medias.xs}{
+        width: 280px;
+        height: 132px;
 
-    @media(max-width: ${theme.breakpoints.xs}){
-        display: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 `
 
@@ -33,41 +33,40 @@ const Nav = styled.nav``
 
 const UlList = styled.ul`
     display: flex;
-    flex-direction: column;
-    background-color: var(--color-primary);
+    background-color: transparent;
+    width: max-content;
+    min-width: max-content;
+    padding: 0;
+    gap: 0;
 
-    gap: 1.25rem;
-    padding: 1.25rem 1.875rem;
-
-    @media(max-width: ${theme.breakpoints.xs}){
-        flex-direction: row;
-        background-color: transparent;
-        width: max-content;
-        min-width: max-content;
-        padding: 0;
-        gap: 0;
+    @media ${theme.medias.xs}{
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 1.25rem 1.875rem;
     }
 `
 
 const LiItem = styled.li`
-    color: var(--color-text-light);
-    font-weight: 400;
     font-size: 16px;
+    font-weight: 500;
+    padding: .625rem .9375rem;
     width: fit-content;
 
-    text-decoration: underline transparent;
-    transition: text-decoration 100ms ease-in-out;
-    &:hover { 
-        text-decoration: underline var(--color-text-light) 1px;
-    }
+    border-bottom: 1px solid ${({ $isActive }) => ($isActive ? theme.colors.primary : 'transparent')};
+    color: ${({ $isActive }) => ($isActive ? theme.colors.primary : theme.colors.textGray)};
     
-    @media(max-width: ${theme.breakpoints.xs}){
-        padding: .625rem .9375rem;
+    @media ${theme.medias.xs}{
+        padding: 0;
+        color: var(--color-text-light);
+        font-weight: 400;
 
-        font-weight: 500;
-        border-bottom: 1px solid ${({ $isActive }) => ($isActive ? theme.colors.primary : 'transparent')};
-        color: ${({ $isActive }) => ($isActive ? theme.colors.primary : theme.colors.textGray)};
+        text-decoration: underline transparent;
+        transition: text-decoration 100ms ease-in-out;
+        &:hover { 
+            text-decoration: underline var(--color-text-light) 1px;
+        }
     }
+
 `
 
 const LinkNav = styled(Link)`

@@ -7,21 +7,22 @@ const Container = styled.div`
     height: 100dvh;
 
     display: grid;
-    grid-template-columns: 280px 1fr;
-    grid-template-rows: 120px 1fr 60px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 40px 1fr 60px;
     grid-template-areas: 
-        "nav header"
-        "nav content"
-        "nav footer";
+        "header"
+        "nav"
+        "content"
+        "footer";
 
-    @media(max-width: ${theme.breakpoints.xs}){
-        grid-template-columns: 1fr;
-        grid-template-rows: 60px 40px 1fr 60px;
+
+    @media(${theme.medias.xs}){
+        grid-template-columns: 280px 1fr;
+        grid-template-rows: 120px 1fr 60px;
         grid-template-areas: 
-            "header"
-            "nav"
-            "content"
-            "footer";
+            "nav header"
+            "nav content"
+            "nav footer";
     }
 `
 

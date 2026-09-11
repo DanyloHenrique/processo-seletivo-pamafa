@@ -15,11 +15,11 @@ const FooterWrapper = styled.footer`
 
     color: var(--color-text-gray);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     font-style: 'regular';
     
     @media ${theme.medias.xs}{
-        font-size: 14px;
+        font-size: 16px;
     }
 `
 

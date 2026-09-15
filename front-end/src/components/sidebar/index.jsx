@@ -3,7 +3,7 @@ import React from 'react'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 
-import { SidebarWrapper, ContainerLogo, Nav as NavStyled, UlList, LiItem, LinkNav } from './styles'
+import { SidebarWrapper, ContainerLogo, Nav, UlList, LiItem, LinkNav } from './styles'
 
 const menuNavigation = [
     { path: '/', text: 'Exercício 01' },
@@ -17,7 +17,7 @@ const menuNavigation = [
 ]
 
 
-export const Nav = () => {
+export const Sidebar = () => {
     const currentPath = usePathname()
 
     return (
@@ -26,11 +26,11 @@ export const Nav = () => {
                 <Image src="/LogoPamafa.svg" alt='Logo Pa' width={220} height={48} priority />
             </ContainerLogo>
 
-            <NavStyled>
+            <Nav>
                 <UlList>
                     {menuNavigation.map((item) => <LiItem $isActive={currentPath === item.path} key={item.path}> <LinkNav href={item.path}>{item.text}</LinkNav> </LiItem>)}
                 </UlList>
-            </NavStyled>
+            </Nav>
         </SidebarWrapper>
     )
 }

@@ -12,7 +12,9 @@ const SidebarWrapper = styled.aside`
     scrollbar-width: thin;
 
     @media ${theme.medias.xs}{
-        height: 100dvh;
+        height: 100%;
+        overflow-x: hidden;
+
         width: clamp(9.375rem, 25vw, 17.5rem);
         background-color: var(--color-primary);
         flex-direction: column;

@@ -5,8 +5,7 @@ import { Container, Main } from './styles'
 
 import { Footer } from '@/components/footer'
 import { Header } from '@/components/header'
-import { Nav } from '@/components/nav';
-import { Title } from '@/components/title';
+import { Sidebar } from '@/components/sidebar';
 
 const MontserratSans = Montserrat({
   variable: "--font-montserrat",
@@ -25,7 +24,7 @@ export default function RootLayout({ children }) {
         <GlobalStyles />
         <Container>
           <Header />
-          <Nav />
+          <Sidebar />
           <Main>
             {children}
           </Main>

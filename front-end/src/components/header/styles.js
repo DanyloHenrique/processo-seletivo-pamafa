@@ -20,20 +20,32 @@ const HeaderWrapper = styled.header`
     overflow-wrap: normal;
 
     @media(${theme.medias.xs}){
+        flex-direction: column;
+        
         height: 7.5rem;
         background-color: var(--color-white);
         color: var(--color-text);
 
-        padding: 1.25rem 2.5rem;
+        padding: 1.25rem 0.5rem;
         align-items: center;
     }
 
+    @media (min-width: 550px) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.25rem 2.5rem;
+    }
 
     /* toggle IMAGE and TITLE components*/
     ${TitleWrapper}{
         display: none;
         @media(${theme.medias.xs}){
             display: block;
+            font-size: 28px;
+        }
+
+        @media ${theme.medias.sm}{
+            font-size: 36px;
         }
     } 
     > img{
@@ -49,11 +61,15 @@ const UserName = styled.p`
     font-weight: 500;
     color: var(--color-text-light);
     text-wrap-mode: nowrap;
-    
+
     @media(${theme.medias.xs}){
         color: var(--color-text-gray);
         font-weight: 200;
-        font-size: 20px;
+        font-size: 1rem;
+    }
+
+    @media ${theme.medias.sm}{
+        font-size: 1.25rem;
     }
 `
 

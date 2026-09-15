@@ -12,6 +12,8 @@ const menuNavigation = [
     { path: '/exercicio04', text: 'Exercício 04' },
     { path: '/exercicio05', text: 'Exercício 05' },
     { path: '/exercicio06', text: 'Exercício 06' },
+    { path: '/exercicio07', text: 'Exercício 07' },
+    { path: '/exercicio08', text: 'Exercício 08' },
 ]
 
 

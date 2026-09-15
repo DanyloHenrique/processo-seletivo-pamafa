@@ -9,9 +9,11 @@ const SidebarWrapper = styled.aside`
     height: 2.5rem;
     display: flex;
     overflow-x: scroll;
+    scrollbar-width: thin;
 
     @media ${theme.medias.xs}{
         height: 100dvh;
+        width: clamp(9.375rem, 25vw, 17.5rem);
         background-color: var(--color-primary);
         flex-direction: column;
     }
@@ -20,12 +22,17 @@ const ContainerLogo = styled.div`
     display: none;
 
     @media ${theme.medias.xs}{
-        width: 280px;
+        width: 100%;
         height: 132px;
+        padding-inline: 1rem;
 
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    @media ${theme.medias.sm}{
+        padding-inline: 0rem;
     }
 `
 

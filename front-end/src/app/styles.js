@@ -17,7 +17,7 @@ const Container = styled.div`
 
 
     @media(${theme.medias.xs}){
-        grid-template-columns: 280px 1fr;
+        grid-template-columns: auto 1fr;
         grid-template-rows: 120px 1fr 60px;
         grid-template-areas: 
             "nav header"

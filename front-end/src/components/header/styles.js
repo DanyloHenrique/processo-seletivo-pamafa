@@ -60,8 +60,8 @@ const UserName = styled.p`
     font-size: 14px;
     font-weight: 500;
     color: var(--color-text-light);
-    text-wrap-mode: nowrap;
-
+    white-space: nowrap;
+    
     @media(${theme.medias.xs}){
         color: var(--color-text-gray);
         font-weight: 200;
